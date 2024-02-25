@@ -4,6 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
   <title>Cat Energy</title>
@@ -12,8 +17,12 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo" href="#">
-      <img class="logo__img" src="#" alt="Логотип 'Cat Energy'" width="33" height="38">
-      <img class="logo__text" src="#" alt="Cat Energy" width="101" height="18">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202"
+          height="59">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50">
+        <img class="logo__img" src="images/logo-mobile.svg" alt="Логотип 'Cat Energy'" width="190" height="38">
+      </picture>
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
@@ -38,7 +47,14 @@
     <section class="hero">
       <h1 class="hero__title">Функциональное питание для котов</h1>
       <p class="hero__text">Занялся собой?Займись котом!</p>
-      <img class="hero__image" src="#" alt="Продукт 'Cat Energy' со вкусом курица 500 грамм" width="280" height="270">
+      <picture>
+        <source type="image/jpeg" media="(min-width: 1440px)"
+          srcset="images/hero__desktop@1x.jpg 1x, images/hero__desktop@2x.jpg 2x" width="552" height="499">
+        <source type="image/jpeg" media="(min-width: 768px)"
+          srcset="images/hero__tablet@1x.jpg 1x, images/hero__tablet@2x.jpg 2x" width="709" height="609">
+        <img class="hero__image" src="images/hero__mobile@1x.jpg" srcset="images/hero__mobile@2x.jpg 2x"
+          alt="Продукт 'Cat Energy' со вкусом курица 500 грамм" width="280" height="270">
+      </picture>
       <button class="hero__button button" type="button">Подобрать программу</button>
     </section>
     <section class="programms">
@@ -48,20 +64,29 @@
           <h3 class="programm__title">Похудение</h3>
           <p class="programm__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
             Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="programm__link" href="#">Каталог Slim
-            <svg class="programm__link-icon" width="32" height="10">
-              <use href="img/sprite.svg#programm-link"></use>
-            </svg>
-          </a>
+          <a class="programm__link" href="#">Каталог Slim </a>
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/cat-slim.svg" width="100"
+              height="106">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/cat-slim.svg" width="200"
+              height="211">
+            <img class="programm__image" src="images/cat-slim.svg" alt="Силуэт стройного кота на зеленом фоне"
+              width="50" height="53">
+          </picture>
         </li>
         <li class="programms__item programm">
           <h3 class="programm__title">Набор массы</h3>
           <p class="programm__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
             Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="programm__link" href="#">Каталог Pro
-            <svg class="programm__link-icon" width="32" height="10">
-              <use href="img/sprite.svg#programm-link"></use>
-            </svg>
+            <picture>
+              <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/cat-pro.svg" width="134"
+                height="56">
+              <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/cat-pro.svg" width="268"
+                height="200">
+              <img class="programm__image" src="images/cat-pro.svg" alt="Силуэт стройного кота на зеленом фоне"
+                width="67" height="28">
+            </picture>
           </a>
         </li>
       </ul>
@@ -101,10 +126,22 @@
       </dl>
       <p class="example__cost">Затраты на питание: 15000 руб.</p>
       <div class="example__different different">
-        <img class="different__image different__image--before" src="#" alt="Вид кота до начала программы похудения"
-          width="280" height="256">
-        <img class="different__image different__image--affter" src="#" alt="Вид кота после программы похудения"
-          width="280" height="256">
+        <picture>
+          <source type="image/jpeg" media="(min-width: 768px)"
+            srcset="images/different_tablet-before@1x.jpg 1x, images/different_tablet-before@2x.jpg 2x" width="560"
+            height="512">
+          <img class="different__image different__image--before" src="images/different_mobile-before@1x.jpg"
+            srcset="images/different_mobile-before@2x.jpg 2x" alt="Вид кота до начала программы похудения" width="280"
+            height="256">
+        </picture>
+        <picture>
+          <source type="image/jpeg" media="(min-width: 768px)"
+            srcset="images/different_tablet-after@1x.jpg 1x, images/different_tablet-after@2x.jpg 2x" width="560"
+            height="512">
+          <img class="different__image different__image--affter" src="images/different_mobile-after@1x.jpg"
+            srcset="images/different_mobile-after@2x.jpg 2x" alt="Вид кота после программы похудения" width="280"
+            height="256">
+        </picture>
         <div class="different__control">
           <div class="different__dividing-line"></div>
           <div class="different__dividing-buttons">
@@ -117,18 +154,25 @@
           </div>
         </div>
     </section>
-    <section class="contacts">
+  </main>
+  <footer class="main-footer">
+    <section class="main-footer__contact contacts">
       <h2 class="visually-hidden">Наш Адрес:</h2>
       <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
       <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       <div class="contacts__map-wrapper">
-        <img class="contacts__map" src="#" alt="Cat Energy на карте" width="320" height="360">
+        <picture>
+          <source type="image/jpeg" media="(min-width: 1440px)"
+            srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x" width="1440" height="400">
+          <source type="image/jpeg" media="(min-width: 768px)"
+            srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x" width="768" height="400">
+          <img class="contacts__map" src="images/location@1x.jpg" srcset="images/location@2x.jpg 2x"
+            alt="Cat Energy на карте" width="320" height="360">
+        </picture>
       </div>
     </section>
-  </main>
-  <footer class="main-footer">
     <div class="main-footer__logo logo">
-      <img class="logo__text logo__text--footer" src="#" alt="Cat Energy" width="128" height="24">
+      <img class="logo__text logo__text--footer" src="images/logo-text.svg" alt="Cat Energy" width="128" height="24">
     </div>
     <ul class="main-footer__social social">
       <li class="social__item">

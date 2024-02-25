@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
   <title>Cat Energy</title>
@@ -12,8 +16,12 @@
 <body>
   <header class="main-header">
     <a class="main-header__logo logo" href="#">
-      <img class="logo__img" src="#" alt="Логотип 'Cat Energy'"  width="33" height="38">
-      <img class="logo__text" src="#" alt="Cat Energy"  width="101" height="18">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202"
+          height="59">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50">
+        <img class="logo__img" src="images/logo-mobile.svg" alt="Логотип 'Cat Energy'" width="190" height="38">
+      </picture>
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
@@ -96,8 +104,23 @@
     </section>
   </main>
   <footer class="main-footer">
+    <section class="main-footer__contact contacts">
+      <h2 class="visually-hidden">Наш Адрес:</h2>
+      <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
+      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <div class="contacts__map-wrapper">
+        <picture>
+          <source type="image/jpeg" media="(min-width: 1440px)"
+            srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x" width="1440" height="400">
+          <source type="image/jpeg" media="(min-width: 768px)"
+            srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x" width="768" height="400">
+          <img class="contacts__map" src="images/location@1x.jpg" srcset="images/location@2x.jpg 2x"
+            alt="Cat Energy на карте" width="320" height="360">
+        </picture>
+      </div>
+    </section>
     <div class="main-footer__logo logo">
-      <img class="logo__text logo__text--footer" src="#" alt="Cat Energy" width="128" height="24">
+      <img class="logo__text logo__text--footer" src="images/logo-text.svg" alt="Cat Energy" width="128" height="24">
     </div>
     <ul class="main-footer__social social">
       <li class="social__item">
